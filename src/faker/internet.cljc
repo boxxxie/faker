@@ -1,9 +1,11 @@
 (ns faker.internet
   "Generate fake domains and emails."
   (:require
-     [clojure.string :as string]
-     [faker.company :as co]
-     [faker.name :as na]))
+   [clojure.string :as string]
+   [faker.company :as co]
+   [faker.name :as na]
+   [random :refer :all])
+  (:refer-clojure :exclude [rand-int rand rand-nth shuffle]))
 
 (def ^{:private true} suffixes ["co.uk" "com" "us" "uk" "ca" "biz" "info" "name"])
 

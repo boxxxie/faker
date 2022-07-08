@@ -2,7 +2,9 @@
   "Create fake company data"
   (:require [faker.name :as fkname]
             [clojure.string :refer [join]]
-            [faker.company-data :as cd]))
+            [faker.company-data :as cd]
+            [random :refer :all])
+  (:refer-clojure :exclude [rand-int rand rand-nth shuffle]))
 
 (defn suffix
   "Return a random company suffix, like Inc or Group."

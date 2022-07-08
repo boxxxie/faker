@@ -1,0 +1,8 @@
+{
+ :paths ["src"]
+ :deps {
+        org.clojure/clojure                    {:mvn/version "1.11.1"}
+        boxxxie/random                         {:git/url "https://github.com/boxxxie/random"
+                                                :sha     "dd25c840d4647c5d59e898bdb923853e03fdd7da"}
+        }
+ }

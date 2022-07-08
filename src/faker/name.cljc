@@ -1,7 +1,10 @@
 (ns faker.name
   "Create fake data for person names"
-  (:require [clojure.string :refer [join]]
-            [faker.name-data :as nd]))
+  (:require
+   [clojure.string :refer [join]]
+   [faker.name-data :as nd]
+   [random :refer :all])
+  (:refer-clojure :exclude [rand-int rand rand-nth shuffle]))
 
 (defn first-name
   "Create a fake person first name"

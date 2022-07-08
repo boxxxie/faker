@@ -1,6 +1,9 @@
 (ns faker.phone-number
   "Generate fake phone numbers."
-  (:require [clojure.string :as string]))
+  (:require
+   [clojure.string :as string]
+   [random :refer :all])
+  (:refer-clojure :exclude [rand-int rand rand-nth shuffle]))
 
 (def ^{:private true} formats
   ["###-###-####",

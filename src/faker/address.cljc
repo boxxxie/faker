@@ -2,7 +2,10 @@
   "Create fake address data."
   (:require [faker.name :as na]
             [faker.address-data :as ad]
-            [clojure.string :as string]))
+            [clojure.string :as string]
+            [random :refer :all]
+            )
+  (:refer-clojure :exclude [rand-int rand rand-nth shuffle]))
 
 
 (defn- numerify [& formats]
@@ -74,7 +77,7 @@
        (str base " " (secondary-address))
        base))))
 
-; UK Variants
+;; UK Variants
 
 (defn uk-county
   "Return a random UK county."
